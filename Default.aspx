@@ -89,7 +89,7 @@
                          <a class="btn btn-sm btn-outline-primary" href="Products.aspx" role="button">Buy Now</a>
       </div>
     </div>
-    <div class="carousel-item text-center">
+    <div class="carousel-item text-center">c
       <img src="Images/3.png" class="img-fluid" alt="..."/>
       <div class="carousel-caption d-md-block">
                <a class="btn btn-sm btn-outline-primary" href="Products.aspx" role="button">Buy Now</a>
