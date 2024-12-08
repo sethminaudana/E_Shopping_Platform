@@ -287,6 +287,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Icons\1b8c944a60aded920baf9a3ed09b9adc.png" />
     <Content Include="Images\1.jpg" />
     <Content Include="Images\2.png" />
     <Content Include="Images\3.png" />
@@ -486,7 +487,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Icons\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
