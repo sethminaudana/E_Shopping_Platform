@@ -63,7 +63,7 @@
        </li>
  <li>
          <asp:Button ID="btnlogout"  CssClass="btn btn-default navbar-btn my-2 my-sm-0" runat="server"
-             Text="Sign Out"  />
+             Text="Sign Out" OnClick="btnlogout_Click" />
      </li>
              </ul>
                
@@ -186,7 +186,7 @@
         <a href="#">Back to top</a>
     </p>
 </div>
-           <footer class="bg-primary text-white text-center text-lg-start">
+           <footer class="bg-primary text-white text-center text-lg-start bottom-0 w-100">
   <!-- Grid container -->
   <div class="container p-4">
     <!--Grid row-->
