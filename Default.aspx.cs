@@ -16,10 +16,10 @@ namespace E_Shopping_Platform
         public static String CS = "Data Source=SETHMINA\\SQLEXPRESS;Initial Catalog=MyShoppingDB;Integrated Security=True";
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Request.QueryString["UserLogin"] == "YES")
-            {
-                Response.Redirect("UserHome.aspx?UserLogin=YES");
-            }
+            //if (Request.QueryString["UserLogin"] == "YES")
+           // {
+          //      Response.Redirect("UserHome.aspx?UserLogin=YES");
+         //   }
 
             if (Session["Username"] != null)
             {
@@ -41,7 +41,7 @@ namespace E_Shopping_Platform
                 btnSignIN.Visible = true;
                 btnlogout.Visible = false;
                 //Response.Redirect("Default.aspx");
-                Response.Write("<script type='text/javascript'>alert('Login plz')</script>");
+             //   Response.Write("<script type='text/javascript'>alert('Login plz')</script>");
 
             }
         }
@@ -95,7 +95,7 @@ namespace E_Shopping_Platform
         protected override void InitializeCulture()
         {
             CultureInfo ci = new CultureInfo("en-IN");
-            ci.NumberFormat.CurrencySymbol = "₹";
+            ci.NumberFormat.CurrencySymbol = "$";
             Thread.CurrentThread.CurrentCulture = ci;
 
             base.InitializeCulture();

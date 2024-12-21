@@ -12,25 +12,29 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-                       <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-<a class="navbar-brand" href="UserHome.aspx">
-    <img src="Icons/1b8c944a60aded920baf9a3ed09b9adc.png" alt="MyEShopping" height="30" />
+                           <nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class=" container-fluid ">
+<a class="navbar-brand" href="Default.aspx" style="margin-right:200px">
+    <img src="Icons/1b8c944a60aded920baf9a3ed09b9adc.png" alt="MyEShopping" height="50" />
     MyEShopping
-</a>    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+</a> <div>
+       <asp:Button ID="btnSignIN" runat="server" CssClass="btn btn-outline-secondary my-2" Text="Sign In" PostBackUrl="~/SignIn.aspx"/>
+          </div>   
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+      
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="UserHome.aspx">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="About.aspx">About</a>
         </li>
           <li class="nav-item">
-  <a class="nav-link" href="#">Contact US</a>
+  <a class="nav-link" href="Contact.aspx">Contact US</a>
 </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -38,39 +42,28 @@
           </a>
             
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">All Produts</a></li>
+            <li><a class="dropdown-item" href="Products.aspx">All Produts</a></li>
               <li><hr class="dropdown-divider"/></li>
               <h6 class="dropdown-header">Men</h6>
-            <li><a class="dropdown-item" href="#">Shirts</a></li>
-              <li><a class="dropdown-item" href="#">Pants</a></li>
-              <li><a class="dropdown-item" href="#">Denims</a></li>
+            <li><a class="dropdown-item" href="ManShirt.aspx">Shirts</a></li>
+              <li><a class="dropdown-item" href="ManPants.aspx">Pants</a></li>
+              <li><a class="dropdown-item" href="ManDenims.aspx"x>Denims</a></li>
                 <li><hr class="dropdown-divider"/></li>
           <h6 class="dropdown-header">Women</h6>
-        <li><a class="dropdown-item" href="#">Top</a></li>
-      <li><a class="dropdown-item" href="#">Leggins</a></li>
-         <li><a class="dropdown-item" href="#">Sarees</a></li>
+        <li><a class="dropdown-item" href="WomanTop.aspx">Top</a></li>
+      <li><a class="dropdown-item" href="womanLegging.aspx">Leggins</a></li>
+         <li><a class="dropdown-item" href="WomanSarees.aspx">Sarees</a></li>
             <li><hr class="dropdown-divider"/></li>
           </ul> </li>
-                  <li class="nav-item">
-     <asp:Button  CssClass="btn btn-primary navbar-btn my-2 my-sm-0" runat="server" Text="Cart" /><span class="badge " id="pCount" runat="server">0</span>
-     
- </li>
- <li class="nav-item">
-    <asp:Button ID="btnSignIN" runat="server" CssClass="btn btn-outline-secondary my-2" Text="Sign In"/>
-      <asp:Button ID="btnSignUP"  runat="server" CssClass="btn btn-outline-secondary my-2 my-sm-0" Text="Sign Up"/>
-       </li>
- 
+                  
              </ul>
                
     </div>
+     
   </div>
 </nav>
-
-    </div>
-
-
         <!---signup page--->
-        <div class ="center-page">
+        <div class ="align-content-center p-5">
 
             <label class="col-xs-11">UserName:</label>
             <div class="col-xs-11">
@@ -99,16 +92,17 @@
             <div class="col-xs-11">
             <asp:TextBox ID="txtEmail" runat="server" Class="form-control" placeholder="Enter Your Email"></asp:TextBox>
             </div>
+            <br />
             <label class="col-xs-11"></label>
              <div class="col-xs-11">
-                 <asp:Button ID="txtsignup" Class="btn btn-success" runat="server" Text="SignUP" OnClick="txtsignup_Click" />
-            &nbsp;<asp:Label ID="lblMsg" runat="server" Text="Label"></asp:Label>
+                 <asp:Button ID="txtsignup" Class="btn btn-success" runat="server" Text="SignUP&nbsp;" OnClick="txtsignup_Click" />
+            <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
             </div>
         </div>
          <!---signup page end--->
-
-
-                 <footer class="bg-primary text-white text-center text-lg-start bottom-0 w-100">
+                                    
+    </form>
+                     <footer class="bg-primary text-white text-center text-lg-start bottom-0 w-100">
   <!-- Grid container -->
   <div class="container p-4">
     <!--Grid row-->
@@ -155,8 +149,6 @@
   </div>
   <!-- Copyright -->
 </footer>
-       
-    </form>
      <script src="Bootstrap 5/popper.min.js"></script>
  <script src="Bootstrap 5/bootstrap.min.js"></script>
 </body>

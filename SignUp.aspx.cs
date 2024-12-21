@@ -40,6 +40,7 @@ namespace E_Shopping_Web
             {
                 Response.Write("<script> alert('Registration failed');  </script>");
                 lblMsg.ForeColor = System.Drawing.Color.Red;
+                lblMsg.Text = "Try Again";
             }
 
         }

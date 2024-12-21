@@ -42,24 +42,6 @@ namespace E_Shopping_Platform
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl pCount;
 
         /// <summary>
-        /// btnLogin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
-
-        /// <summary>
-        /// btnSignUP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignUP;
-
-        /// <summary>
         /// btnlogout control.
         /// </summary>
         /// <remarks>

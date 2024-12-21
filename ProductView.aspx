@@ -2,67 +2,60 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
-    <br />
-
-    <br /><br /><br />
+   <br />
     <button id="btnCart2" runat="server" class="btn btn-primary navbar-btn pull-right" onserverclick="btnCart2_ServerClick" type="button">
                         Cart <span id="CartBadge" runat="server" class="badge">0</span>
     </button>
     <br />
     <div style="padding-top:50px">
-
-
-    <!--- Success Alert --->
+            <!--- Success Alert --->
                         <div id="divSuccess" runat="server" class="alert alert-success alert-dismissible fade in h4">
-                            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                            <a href="#" class="close" data-dismiss="alert" aria-label="close">x</a>
                             <strong>Success! </strong>Item successfully added to cart. <a href="Cart.aspx">View Cart</a>
                         </div>
 
-        <div class="col-md-5">
-            <div style="max-width:480px" class="thumbnail">
-             <%--   for proImage slider--%>
-                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <div class="container mt-5" style=" width:fit-content ">
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-
-  </ol>
+<div class="carousel-indicators">
+  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+</div>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-
+  <div class="carousel-inner">
+  
       <asp:repeater ID="rptrImage" runat="server">
           <ItemTemplate>
-    <div class="item <%# GetActiveImgClass(Container.ItemIndex) %>">
-      <img src="Images/ProductImages/<%# Eval("PID") %>/<%# Eval("Name") %><%# Eval("Extention") %>" alt="<%# Eval("Name") %>" onerror="this.src='Images/ImageNotAvailable.jpg'">
+    <div class="carousel-item <%# GetActiveImgClass(Container.ItemIndex) %>">
+      <img src="Images/ProductImages/<%# Eval("PID") %>/<%# Eval("Name") %><%# Eval("Extention") %>" alt="<%# Eval("Name") %>" class="d-block w-auto" height="600px" onerror="this.src='Images/ImageNotAvailable.jpg'">
       
     </div>
              </ItemTemplate>
     </asp:repeater>
-
+      
 
   </div>
 
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+    <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
   </a>
 </div>
+            </div>
 
               <%--  for proimage slider ending--%>
             </div>
-        </div>
-        <div class="col-md-5">
+        
+        <div class="p-3">
             <asp:Repeater ID="rptrProductDetails" runat="server" OnItemDataBound="rptrProductDetails_ItemDataBound">
                 <ItemTemplate>
             <div class="divDet1">
@@ -107,8 +100,7 @@
 
 </ItemTemplate>
 </asp:Repeater>
-
-        </div>
-
-    </div>
+            </div>
+   
+    
 </asp:Content>

@@ -14,25 +14,33 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-<a class="navbar-brand" href="UserHome.aspx">
-    <img src="Icons/1b8c944a60aded920baf9a3ed09b9adc.png" alt="MyEShopping" height="30" />
+                    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class=" container-fluid ">
+<a class="navbar-brand" href="Default.aspx" style="margin-right:200px">
+    <img src="Icons/1b8c944a60aded920baf9a3ed09b9adc.png" alt="MyEShopping" height="50" />
     MyEShopping
-</a>    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+</a> <div>
+                     <asp:Button  CssClass="btn btn-primary navbar-btn my-2 my-sm-0" runat="server" Text="Cart" PostBackUrl="~/Cart.aspx" /><span class="badge " id="pCount" runat="server">0</span>
+       <asp:Button ID="btnSignIN" runat="server" CssClass="btn btn-outline-secondary my-2" Text="Sign In" PostBackUrl="~/SignIn.aspx"/>
+     <asp:Button ID="btnSignUP"  runat="server" CssClass="btn btn-outline-secondary my-2 my-sm-0 me-5" Text="Sign Up" PostBackUrl="~/SignUp.aspx"/>
+     <asp:Button ID="btnlogout"  CssClass="btn btn-default navbar-btn my-2 my-sm-0" runat="server" Text="Sign Out" OnClick="btnlogout_Click" />
+    
+     </div>   
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+      
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="UserHome.aspx">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a class="nav-link" href="About.aspx">About</a>
         </li>
           <li class="nav-item">
-  <a class="nav-link" href="#">Contact US</a>
+  <a class="nav-link" href="Contact.aspx">Contact US</a>
 </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -40,36 +48,28 @@
           </a>
             
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">All Produts</a></li>
+            <li><a class="dropdown-item" href="Products.aspx">All Produts</a></li>
               <li><hr class="dropdown-divider"/></li>
               <h6 class="dropdown-header">Men</h6>
-            <li><a class="dropdown-item" href="#">Shirts</a></li>
-              <li><a class="dropdown-item" href="#">Pants</a></li>
-              <li><a class="dropdown-item" href="#">Denims</a></li>
+            <li><a class="dropdown-item" href="ManShirt.aspx">Shirts</a></li>
+              <li><a class="dropdown-item" href="ManPants.aspx">Pants</a></li>
+              <li><a class="dropdown-item" href="ManDenims.aspx"x>Denims</a></li>
                 <li><hr class="dropdown-divider"/></li>
           <h6 class="dropdown-header">Women</h6>
-        <li><a class="dropdown-item" href="#">Top</a></li>
-      <li><a class="dropdown-item" href="#">Leggins</a></li>
-         <li><a class="dropdown-item" href="#">Sarees</a></li>
+        <li><a class="dropdown-item" href="WomanTop.aspx">Top</a></li>
+      <li><a class="dropdown-item" href="womanLegging.aspx">Leggins</a></li>
+         <li><a class="dropdown-item" href="WomanSarees.aspx">Sarees</a></li>
             <li><hr class="dropdown-divider"/></li>
           </ul> </li>
-                  <li class="nav-item">
-     <asp:Button  CssClass="btn btn-primary navbar-btn my-2 my-sm-0" runat="server" Text="Cart" /><span class="badge " id="pCount" runat="server">0</span>
-     
- </li>
- <li class="nav-item">
-    <asp:Button ID="btnSignIN" runat="server" CssClass="btn btn-outline-secondary my-2" Text="Sign In"/>
-      <asp:Button ID="btnSignUP"  runat="server" CssClass="btn btn-outline-secondary my-2 my-sm-0" Text="Sign Up"/>
-       </li>
- <li>
-         <asp:Button ID="btnlogout"  CssClass="btn btn-default navbar-btn my-2 my-sm-0" runat="server"
-             Text="Sign Out" OnClick="btnlogout_Click" />
-     </li>
+                  
              </ul>
                
     </div>
+     
   </div>
 </nav>
+        <div class="p-3">
+            
      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -108,52 +108,49 @@
             <hr />
              <div class="row ">
      <div class="col-lg-4">
-         <img class="img-circle " src="Images/iphone11.jpeg" alt="thumb" width="140" height="140" />
+         <img class="img-circle mt-2 mb-2 " src="Images/iphone11.jpeg" alt="thumb" width="200" height="140" />
          <h2>
              Mobiles</h2>
          <p>
              Featuring a 15.49-cm (6.1) all-screen Liquid Retina LCD and a glass and aluminum
              design, the iPhone 11 is as beautiful as it gets. Also, the IP68 rating ensures
              that is water-resistant up to 2 meters for 30 minutes....</p>
-         <p>
-             <a class="btn btn-default " href="#" role="button">View More &raquo;</a></p>
+              <a href="#">View More &raquo;</a>
      </div>
                  <br />
      <div class="col-lg-4" >
-         <img class="img-circle " src="Images/Shoes.jpeg" alt="thumb" width="140" height="140" />
+         <img class="img-circle mt-2 mb-2" src="Images/Shoes.jpeg" alt="thumb" width="200" height="140" />
          <h2>
              Footwear</h2>
          <p>
              Featuring a 15.49-cm (6.1) all-screen Liquid Retina LCD and a glass and aluminum
              design, the iPhone 11 is as beautiful as it gets. Also, the IP68 rating ensures
              that is water-resistant up to 2 meters for 30 minutes....</p>
-         <p>
-             <a class="btn btn-default " href="#" role="button">View More &raquo;</a></p>
+                    <a  href="#">View More &raquo;</a>
      </div>
      <div class="col-lg-4">
-         <img class="img-circle " src="Images/tshirt.jpeg" alt="thumb" width="140" height="140" />
+         <img class="img-circle mt-2 mb-2 " src="Images/tshirt.jpeg" alt="thumb" width="200" height="140" />
          <h2>
              Clothings</h2>
          <p>
              Featuring a 15.49-cm (6.1) all-screen Liquid Retina LCD and a glass and aluminum
              design, the iPhone 11 is as beautiful as it gets. Also, the IP68 rating ensures
              that is water-resistant up to 2 meters for 30 minutes....</p>
-         <p>
-             <a class="btn btn-default " href="#" role="button">View More &raquo;</a></p>
+                     <a href="#" >View More &raquo;</a>
      </div>
  </div>
-             <div class="panel panel-primary">
-     <div class="panel-heading">
-         BLACK FRIDAY DEAL</div>
-     <div class="panel-body">
-         <div class="row" style="padding-top: 50px">
+            <br />
+     <h1 class="text-center">
+         BLACK FRIDAY DEAL</h1>
+    
+         <div class="row" >
              <asp:Repeater ID="rptrProducts" runat="server">
                  <ItemTemplate>
-                     <div class="col-sm-3 col-md-3">
+                     <div class="col-md-4 mb-4 ">
                          <a href="ProductView.aspx?PID=<%# Eval("PID") %>" style="text-decoration: none;">
-                             <div class="thumbnail">
+                             <div>
                                  <img src="Images/ProductImages/<%# Eval("PID") %>/<%# Eval("ImageName") %><%# Eval("Extention") %>"
-                                     alt="<%# Eval("ImageName") %>" />
+                                     alt="<%# Eval("ImageName") %>" width="300px" height="300px" class="p-1" />
                                  <div class="caption">
                                      <div class="probrand">
                                          <%# Eval ("BrandName") %>
@@ -162,7 +159,7 @@
                                          <%# Eval ("PName") %>
                                      </div>
                                      <div class="proPrice">
-                                         <span class="proOgPrice">
+                                         <span class="progPrice">
                                              <%# Eval ("PPrice","{0:0,00}") %>
                                          </span>
                                          <%# Eval ("PSelPrice","{0:c}") %>
@@ -176,17 +173,20 @@
                  </ItemTemplate>
              </asp:Repeater>
          </div>
-     </div>
-     <div class="panel-footer">
+     
+     <div class="opacity-25 text-center m-3">
          Buy 50 mobiles and get a gift card</div>
- </div>
+
             <hr style="margin-right:100px" />
 <div class="position-relative" border: 1px solid #ddd;">
     <p class="position-absolute bottom-0 end-0 m-2">
-        <a href="#">Back to top</a>
+        <button class="btn-info" href="#">Back to top</button>
     </p>
 </div>
-           <footer class="bg-primary text-white text-center text-lg-start bottom-0 w-100">
+           
+        </div>
+    </form>
+               <footer class="bg-primary text-white text-center text-lg-start bottom-0 w-100">
   <!-- Grid container -->
   <div class="container p-4">
     <!--Grid row-->
@@ -233,8 +233,6 @@
   </div>
   <!-- Copyright -->
 </footer>
-        </div>
-    </form>
    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 -->

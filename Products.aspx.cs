@@ -38,14 +38,14 @@ namespace E_Shopping_Web
                 }
                 else
                 {
-                    Response.Redirect("~/Default.aspx");
+                    Response.Redirect("~/SignIn.aspx");
                 }
             }
         }
         protected override void InitializeCulture()
         {
             CultureInfo ci = new CultureInfo("en-IN");
-            ci.NumberFormat.CurrencySymbol = "₹";
+            ci.NumberFormat.CurrencySymbol = "$";
             Thread.CurrentThread.CurrentCulture = ci;
 
             base.InitializeCulture();

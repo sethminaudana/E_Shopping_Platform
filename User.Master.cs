@@ -18,15 +18,14 @@ namespace E_Shopping_Platform
             {
                 //lblSuccess.Text = "Login Success, Welcome <b>" + Session["Username"].ToString() + "</b>";
                 btnlogout.Visible = true;
-                btnLogin.Visible = false;
+                
                 BindCartNumber22();
                
 
             }
             else
             {
-                btnlogout.Visible = false;
-                btnLogin.Visible = true;
+              
                 //Response.Redirect("~/Default.aspx");
 
             }
@@ -39,10 +38,7 @@ namespace E_Shopping_Platform
 
         }
 
-        protected void btnLogin_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/SignIn.aspx");
-        }
+        
         public void BindCartNumber()
         {
             if (Request.Cookies["CartPID"] != null)

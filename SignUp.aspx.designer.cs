@@ -24,15 +24,6 @@ namespace E_Shopping_Web
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// pCount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pCount;
-
-        /// <summary>
         /// btnSignIN control.
         /// </summary>
         /// <remarks>
@@ -40,15 +31,6 @@ namespace E_Shopping_Web
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnSignIN;
-
-        /// <summary>
-        /// btnSignUP control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignUP;
 
         /// <summary>
         /// txtUname control.
