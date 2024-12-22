@@ -16,8 +16,8 @@
 <a class="navbar-brand" href="Default.aspx" style="margin-right:200px">
     <img src="Icons/1b8c944a60aded920baf9a3ed09b9adc.png" alt="MyEShopping" height="50" />
     MyEShopping
-</a> <div>
-                     <asp:Button  CssClass="btn btn-primary navbar-btn my-2 my-sm-0" runat="server" Text="Cart" PostBackUrl="~/Cart.aspx" /><span class="badge " id="pCount" runat="server">0</span>
+</a> <div class="d-inline">
+                     <asp:Button  CssClass="btn btn-primary navbar-btn my-2 my-sm-0" runat="server" Text="Cart" PostBackUrl="~/Cart.aspx" /><span class="position-absolute translate-middle badge rounded-pill bg-danger " id="pCount" runat="server">0</span>
      <asp:Button ID="btnlogout"  CssClass="btn btn-default navbar-btn my-2 my-sm-0" runat="server" Text="Sign Out" OnClick="btnlogout_Click" />
     
      </div>   
@@ -67,52 +67,40 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
         </div>
-                   <footer class="bg-primary text-white text-center text-lg-start bottom-0 w-100">
+                                 <footer class="bg-primary text-white text-center text-lg-start">
   <!-- Grid container -->
   <div class="container p-4">
-    <!--Grid row-->
     <div class="row">
-      <!--Grid column-->
-      <div class="col-lg-9 col-md-5 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Summary</h5>
-
-        <p class="mr-5">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-          molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-          voluptatem veniam, est atque cumque eum delectus sint!
+      <!-- Summary Column -->
+      <div class="col-lg-9 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">SUMMERY</h5>
+        <p>
+          Welcome to our online store! We offer a wide range of high-quality products, 
+          from the latest gadgets to trendy fashion and footwear. Our mission is to 
+          provide an exceptional shopping experience, combining great deals, fast 
+          delivery, and outstanding customer service. Shop with confidence and explore 
+          our exclusive Black Friday deals and much more. Thank you for choosing us 
+          for your shopping needs!
         </p>
       </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
+      <!-- Links Column -->
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-               <ul class="list-unstyled mb-0">
-          <li>
-            <a href="#!" class="text-white">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 4</a>
-          </li>
+        <h5 class="text-uppercase">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="UserHome.aspx" class="text-white">Home</a></li>
+          <li><a href="Products.aspx" class="text-white">Shop</a></li>
+          <li><a href="About.aspx" class="text-white">About Us</a></li>
+          <li><a href="Contact.aspx" class="text-white">Contact</a></li>
         </ul>
       </div>
-      <!--Grid column-->
     </div>
-    <!--Grid row-->
   </div>
-  <!-- Grid container -->
 
-  <!-- Copyright -->
+  <!-- Copyright Section -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
+    © 2024 Copyright:
     <a class="text-white" href="#">EShopping.com</a>
   </div>
-  <!-- Copyright -->
 </footer>
                 <script src="Bootstrap 5/popper.min.js"></script>
 <script src="Bootstrap 5/bootstrap.min.js"></script>

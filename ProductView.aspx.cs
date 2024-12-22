@@ -122,7 +122,7 @@ namespace E_Shopping_Web
 
                 using (SqlConnection con = new SqlConnection(CS))
                 {
-                    using (SqlCommand cmd = new SqlCommand("select * from tblSizes where BrandID='" + BrandID + "' and CategoryID=" + CatID + " and SubCategoryID=" + SubCatID + " and GenderID=" + GenderID + "", con))
+                    using (SqlCommand cmd = new SqlCommand("select * from tblSizes where BrandID=" + BrandID + "", con))
                     {
                         cmd.CommandType = CommandType.Text;
                         using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
@@ -205,7 +205,7 @@ namespace E_Shopping_Web
         protected override void InitializeCulture()
         {
             CultureInfo ci = new CultureInfo("en-IN");
-            ci.NumberFormat.CurrencySymbol = "₹";
+            ci.NumberFormat.CurrencySymbol = "$";
             Thread.CurrentThread.CurrentCulture = ci;
 
             base.InitializeCulture();
@@ -230,12 +230,12 @@ namespace E_Shopping_Web
                         if (dt.Rows.Count > 0)
                         {
                             string CartQuantity = dt.Compute("Sum(Qty)", "").ToString();
-                            CartBadge.InnerText = CartQuantity;
+                            //CartBadge.InnerText = CartQuantity;
 
                         }
                         else
                         {
-                            CartBadge.InnerText = 0.ToString();
+                           // CartBadge.InnerText = 0.ToString();
                         }
                     }
                 }

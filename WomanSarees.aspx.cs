@@ -37,7 +37,7 @@ namespace E_Shopping_Web
                 }
                 else
                 {
-                    Response.Redirect("~/Default.aspx");
+                    Response.Redirect("~/SignIn.aspx");
                 }
             }
         }
@@ -56,7 +56,7 @@ namespace E_Shopping_Web
                         rptrProducts.DataBind();
                         if (dt.Rows.Count <= 0)
                         {
-                            // Label1.Text = "Sorry! Currently no products in this category.";
+                            label1.Text = "Sorry! Currently no products in this category.";
                         }
                         else
                         {

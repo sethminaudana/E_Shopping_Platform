@@ -31,6 +31,8 @@ namespace E_Shopping_Platform
                     btnSignUP.Visible = false;
                     btnSignIN.Visible = false;
                     btnlogout.Visible = true;
+                    cartid.Visible = true ;
+                    pCount.Visible = true ;
                 }
 
             }
@@ -40,8 +42,10 @@ namespace E_Shopping_Platform
                 btnSignUP.Visible = true;
                 btnSignIN.Visible = true;
                 btnlogout.Visible = false;
+                cartid.Visible = false;
+                pCount.Visible = false;
                 //Response.Redirect("Default.aspx");
-             //   Response.Write("<script type='text/javascript'>alert('Login plz')</script>");
+                //   Response.Write("<script type='text/javascript'>alert('Login plz')</script>");
 
             }
         }

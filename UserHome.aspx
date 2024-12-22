@@ -5,7 +5,7 @@
     <div class="m-3">
      <asp:Label ID="lbl1" runat="server" CssClass ="text-success" Text=""></asp:Label>
         </div>
-                 <div class="row ">
+                 <div class="row ms-3">
      <div class="col-lg-4">
          <img class="img-circle mt-2 mb-2 " src="Images/iphone11.jpeg" alt="thumb" width="200" height="140" />
          <h2>
@@ -42,7 +42,7 @@
      <h1 class="text-center">
          BLACK FRIDAY DEAL</h1>
     
-         <div class="row" >
+         <div class="row m-3" >
              <asp:Repeater ID="rptrProducts" runat="server">
                  <ItemTemplate>
                      <div class="col-md-4 mb-4 ">
@@ -73,11 +73,16 @@
              </asp:Repeater>
          </div>
      
-     <div class="opacity-25 text-center m-3">
-         Buy 50 mobiles and get a gift card</div>
+     <div class="bg-warning text-dark text-center py-3 rounded shadow-sm mb-2">
+  <h4 class="fw-bold mb-2">Special Offer!</h4>
+  <p class="mb-0">
+    <strong>Buy 50 mobiles</strong> and get an exclusive 
+    <span class="text-danger">gift card</span> as a reward!
+  </p>
+</div>
 
             <hr style="margin-right:100px" />
-<div class="position-relative" border: 1px solid #ddd;">
+<div class="position-relative mt-2" border: 1px solid #ddd;">
     <p class="position-absolute bottom-0 end-0 m-2">
         <button class="btn-info" href="#">Back to top</button>
     </p>

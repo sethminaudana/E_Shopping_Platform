@@ -14,6 +14,7 @@
               placeholder="Search Products...." AutoPostBack="true" 
               ontextchanged="txtFilterGrid1Record_TextChanged" ></asp:TextBox>
       <br />
+          <asp:Label ID="label1" runat="server"></asp:Label>
       <hr />
       <asp:repeater ID="rptrProducts" runat="server">
            <ItemTemplate>

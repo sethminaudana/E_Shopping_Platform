@@ -456,7 +456,7 @@
     <Content Include="SignIn.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="Site.Master" />
-    <Content Include="SubCategory.aspx" />
+    <Content Include="AddSubCategory.aspx" />
     <Content Include="Success.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -660,12 +660,12 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="SubCategory.aspx.cs">
-      <DependentUpon>SubCategory.aspx</DependentUpon>
+    <Compile Include="AddSubCategory.aspx.cs">
+      <DependentUpon>AddSubCategory.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SubCategory.aspx.designer.cs">
-      <DependentUpon>SubCategory.aspx</DependentUpon>
+    <Compile Include="AddSubCategory.aspx.designer.cs">
+      <DependentUpon>AddSubCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Success.aspx.cs">
       <DependentUpon>Success.aspx</DependentUpon>

@@ -69,7 +69,7 @@
     </div>
 
 
-
+        <br />
 
         <div class="container">
             <div class ="form-horizontal">
@@ -91,7 +91,8 @@
                     <div class ="col-md-2">   </div>
 
                     <div class ="col-md-6">
-                        <asp:Button ID="btnResetPass" CssClass ="btn btn-default" runat="server" Text="Send" OnClick="btnResetPass_Click" />
+                        <h4 class="alert-danger">This feature is currently under development process</h4>
+                        <asp:Button ID="btnResetPass" CssClass ="btn btn-default" runat="server" Text="Send" Visible="false" OnClick="btnResetPass_Click" />
                    <asp:Label ID="lblResetPassMsg" CssClass ="text-success " runat="server" ></asp:Label>
                          </div>
                 </div>

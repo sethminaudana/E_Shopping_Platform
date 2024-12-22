@@ -51,24 +51,6 @@ namespace E_Shopping_Web
         protected global::System.Web.UI.WebControls.HiddenField hdPidSizeID;
 
         /// <summary>
-        /// btnCart2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton btnCart2;
-
-        /// <summary>
-        /// CartBadge control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl CartBadge;
-
-        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -238,32 +220,5 @@ namespace E_Shopping_Web
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button BtnPlaceNPay;
-
-        /// <summary>
-        /// btnEasyPaisa control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEasyPaisa;
-
-        /// <summary>
-        /// btnJazzCash control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnJazzCash;
-
-        /// <summary>
-        /// btnCOD control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCOD;
     }
 }

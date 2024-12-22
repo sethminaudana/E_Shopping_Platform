@@ -2,84 +2,114 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Cart</title>
-    <link href="Styles.css" rel="stylesheet" />
-    <link href="css/Custome.css" rel="stylesheet" type="text/css" />
-</asp:Content>
+      </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
-    <br />
+    
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
                 <div class="container">
-                <br />
-                <br />
-                    <button id="btnCart2" runat="server" class="btn btn-primary navbar-btn pull-right" onserverclick="btnCart2_ServerClick" type="button">
-                        Cart <span id="CartBadge" runat="server" class="badge">0</span>
-                    </button>
-                    <div style="padding-top: 50px">
+                
+                    <div style="padding-top: 0px">
                         <div class="col-md-9">
-                            <h4 class="proNameViewCart" runat="server" id="h4NoItems"></h4>
-                            <div id="divQtyError" runat="server" class="alert alert-success alert-dismissible fade in h4">
+                            <h4 class="proNameViewCart" runat="server" id="h4NoItems"></h4> <hr />
+                            <div id="divQtyError" runat="server" class="alert alert-success alert-dismissible fade-in h4">
                                 <a href="#" class="close" data-dismiss="alert" aria-label="close"> &times;</a>
                                 <strong>Oops! </strong>Quantity cannot be less than 1.
                             </div>
-                            <asp:Repeater ID="RptrCartProducts" OnItemCommand="RptrCartProducts_ItemCommand" runat="server">
-                                <ItemTemplate>
-                                    <%--Show cart details start--%>
-                                    <div class="media" style="border: 1px solid black;">
-                                        <div class="media-left">
-                                            <a href="ProductView.aspx?PID=<%# Eval("PID") %>" target="_blank">
-                                                <img class="media-object" width="100px" src="Images/ProductImages/<%# Eval("PID") %>/<%# Eval("Name") %><%# Eval("Extention") %>" alt="<%# Eval("Name") %>" onerror="this.src='Images/NoImg.png'" />
-                                            </a>
-                                        </div>
-                                        <div class="media-body">
-                                            <h4 class="media-heading proNameViewCart"><%# Eval("PName") %></h4>
-                                            <span class="ProPriceViewCart">Rs.&nbsp <%# Eval("PSelPrice","{0:0.00}") %></span>
-                                            <span class="proOgPriceView">Rs.&nbsp <%# Eval("PPrice","{0:0.00}") %></span>
+                           <asp:Repeater ID="RptrCartProducts" OnItemCommand="RptrCartProducts_ItemCommand" runat="server">
+    <ItemTemplate>
+        <!-- Cart Item -->
+        <div class="card mb-3 shadow-sm">
+            <div class="row g-0">
+                <!-- Product Image -->
+                <div class="col-md-2">
+                    <a href="ProductView.aspx?PID=<%# Eval("PID") %>" target="_blank">
+                        <img 
+                            class="img-fluid rounded-start" 
+                            src="Images/ProductImages/<%# Eval("PID") %>/<%# Eval("Name") %><%# Eval("Extention") %>" 
+                            alt="<%# Eval("Name") %>" 
+                            onerror="this.src='Images/NoImg.png'" />
+                    </a>
+                </div>
+                <!-- Product Details -->
+                <div class="col-md-10">
+                    <div class="card-body">
+                        <h5 class="card-title"><%# Eval("PName") %></h5>
+                        <p class="card-text mb-1">
+                            <span class="fw-bold text-success">Rs. <%# Eval("PSelPrice", "{0:0.00}") %></span>
+                            <span class="text-muted text-decoration-line-through ms-2">Rs. <%# Eval("PPrice", "{0:0.00}") %></span>
+                            <span class="badge bg-warning text-dark ms-2">Off Rs. <%# string.Format("{0}", Convert.ToInt64(Eval("PPrice")) - Convert.ToInt64(Eval("PSelPrice"))) %></span>
+                        </p>
+                        <!-- Quantity Controls -->
+                        <div class="d-flex align-items-center mb-3">
+                            <label class="me-2">Qty:</label>
+                            <asp:Button ID="BtnMinus" CommandArgument='<%# Eval("PID") %>' CommandName="DoMinus" CssClass="btn btn-outline-secondary btn-sm me-2" runat="server" Text="-" />
+                            <asp:TextBox ID="txtQty" runat="server" CssClass="form-control form-control-sm text-center" Style="width: 50px;" Text='<%# Eval("Qty") %>'></asp:TextBox>
+                            <asp:Button ID="BtnPlus" CommandArgument='<%# Eval("PID") %>' CommandName="DoPlus" CssClass="btn btn-outline-secondary btn-sm ms-2" runat="server" Text="+" />
+                        </div>
+                        <!-- Subtotal and Remove -->
+                        <div class="d-flex justify-content-between align-items-center">
+                            <asp:Button 
+                                CommandArgument='<%# Eval("CartID") %>' 
+                                CommandName="RemoveThisCart" 
+                                ID="btnRemoveCart" 
+                                CssClass="btn btn-danger btn-sm" 
+                                runat="server" 
+                                Text="Remove" />
+                            <span class="fw-bold text-end">SubTotal: Rs. <%# Eval("SubSAmount", "{0:0.00}") %></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ItemTemplate>
+</asp:Repeater>
 
-                                            <span class="proPriceDiscountView"> Off Rs.<%# string.Format("{0}",Convert.ToInt64(Eval("PPrice"))-Convert.ToInt64(Eval("PSelPrice"))) %></span>
-                                            <div class="pull-right form-inline">
-                                                <asp:Label ID="lblQty" runat="server" Text="Qty:" Font-Size="Large"></asp:Label>
-                                                <asp:Button ID="BtnMinus" CommandArgument='<%# Eval("PID") %>' CommandName="DoMinus" Font-Size="Large" runat="server" Text="-" />&nbsp
-                                    <asp:TextBox ID="txtQty" runat="server" Width="40" Font-Size="Large" TextMode="SingleLine" Style="text-align: center" Text='<%# Eval("Qty") %>'></asp:TextBox>&nbsp
-                                     <asp:Button ID="BtnPlus" CommandArgument='<%# Eval("PID") %>' CommandName="DoPlus" runat="server" Text="+" Font-Size="Large" />&nbsp&nbsp&nbsp                                          
-                                            </div>
-                                            <br />
-                                            <p>
-                                                <asp:Button CommandArgument='<%#Eval("CartID") %>' CommandName="RemoveThisCart" ID="btnRemoveCart" CssClass="RemoveButton1" runat="server" Text="Remove" />
-                                                <br />
-                                                <span class="proNameViewCart pull-right">SubTotal: Rs.&nbsp <%# Eval("SubSAmount","{0:0.00}") %></span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </ItemTemplate>
-                            </asp:Repeater>
                             <%--Show cart details Ending--%>
                         </div>
 
                         <div class="col-md-3" runat="server" id="divAmountSect">
-                            <div>
-                                <h5 class=" proNameViewCart">Price Details</h5>
-                                <div>
-                                    <label class=" ">Total</label>
-                                    <span class="pull-right priceGray" runat="server" id="spanCartTotal"></span>
-                                </div>
-                                <div>
-                                    <label class=" ">Cart Discount</label>
-                                    <span class="pull-right priceGreen" runat="server" id="spanDiscount"></span>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="cartTotal">
-                                    <label>Cart Total</label>
-                                    <span class="pull-right " runat="server" id="spanTotal"></span>
-                                    <div>
-                                        <asp:Button ID="btnBuyNow" CssClass="buyNowbtn" runat="server" OnClick="btnBuyNow_Click" Text="BUY NOW" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <!-- Price Details Header -->
+            <h5 class="card-title fw-bold">Price Details</h5>
+            
+            <!-- Total -->
+            <div class="d-flex justify-content-between">
+                <label>Total</label>
+                <span class="text-muted" runat="server" id="spanCartTotal"></span>
+            </div>
+            
+            <!-- Cart Discount -->
+            <div class="d-flex justify-content-between">
+                <label>Cart Discount</label>
+                <span class="text-success" runat="server" id="spanDiscount"></span>
+            </div>
+            
+            <!-- Divider -->
+            <hr>
+            
+            <!-- Cart Total -->
+            <div class="d-flex justify-content-between fw-bold">
+                <label>Cart Total</label>
+                <span runat="server" id="spanTotal"></span>
+            </div>
+            
+            <!-- Buy Now Button -->
+            <div class="text-center mt-3">
+                <asp:Button 
+                    ID="btnBuyNow" 
+                    CssClass="btn btn-primary w-100" 
+                    runat="server" 
+                    OnClick="btnBuyNow_Click" 
+                    Text="BUY NOW" />
+            </div>
+        </div>
+    </div>
+</div>
+
                     </div>
                 </div>
             </ContentTemplate>

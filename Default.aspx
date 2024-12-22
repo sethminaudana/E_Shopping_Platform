@@ -20,10 +20,10 @@
     <img src="Icons/1b8c944a60aded920baf9a3ed09b9adc.png" alt="MyEShopping" height="50" />
     MyEShopping
 </a> <div>
-                     <asp:Button  CssClass="btn btn-primary navbar-btn my-2 my-sm-0" runat="server" Text="Cart" PostBackUrl="~/Cart.aspx" /><span class="badge " id="pCount" runat="server">0</span>
+                     <asp:Button ID="cartid"  CssClass="btn btn-primary navbar-btn my-2 my-sm-0" runat="server" Text="Cart" PostBackUrl="~/Cart.aspx" /><span run class="position-absolute translate-middle badge rounded-pill bg-danger  " id="pCount" runat="server">0</span>
        <asp:Button ID="btnSignIN" runat="server" CssClass="btn btn-outline-secondary my-2" Text="Sign In" PostBackUrl="~/SignIn.aspx"/>
      <asp:Button ID="btnSignUP"  runat="server" CssClass="btn btn-outline-secondary my-2 my-sm-0 me-5" Text="Sign Up" PostBackUrl="~/SignUp.aspx"/>
-     <asp:Button ID="btnlogout"  CssClass="btn btn-default navbar-btn my-2 my-sm-0" runat="server" Text="Sign Out" OnClick="btnlogout_Click" />
+     <asp:Button ID="btnlogout"  CssClass="btn btn-default navbar-btn my-2 my-sm-0 btn-outline-light" runat="server" Text="Sign Out" OnClick="btnlogout_Click" />
     
      </div>   
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -106,76 +106,63 @@
   </button>
 </div>
             <hr />
-             <div class="row ">
-     <div class="col-lg-4">
-         <img class="img-circle mt-2 mb-2 " src="Images/iphone11.jpeg" alt="thumb" width="200" height="140" />
-         <h2>
-             Mobiles</h2>
-         <p>
-             Featuring a 15.49-cm (6.1) all-screen Liquid Retina LCD and a glass and aluminum
-             design, the iPhone 11 is as beautiful as it gets. Also, the IP68 rating ensures
-             that is water-resistant up to 2 meters for 30 minutes....</p>
-              <a href="#">View More &raquo;</a>
-     </div>
-                 <br />
-     <div class="col-lg-4" >
-         <img class="img-circle mt-2 mb-2" src="Images/Shoes.jpeg" alt="thumb" width="200" height="140" />
-         <h2>
-             Footwear</h2>
-         <p>
-             Featuring a 15.49-cm (6.1) all-screen Liquid Retina LCD and a glass and aluminum
-             design, the iPhone 11 is as beautiful as it gets. Also, the IP68 rating ensures
-             that is water-resistant up to 2 meters for 30 minutes....</p>
-                    <a  href="#">View More &raquo;</a>
-     </div>
-     <div class="col-lg-4">
-         <img class="img-circle mt-2 mb-2 " src="Images/tshirt.jpeg" alt="thumb" width="200" height="140" />
-         <h2>
-             Clothings</h2>
-         <p>
-             Featuring a 15.49-cm (6.1) all-screen Liquid Retina LCD and a glass and aluminum
-             design, the iPhone 11 is as beautiful as it gets. Also, the IP68 rating ensures
-             that is water-resistant up to 2 meters for 30 minutes....</p>
-                     <a href="#" >View More &raquo;</a>
-     </div>
- </div>
-            <br />
-     <h1 class="text-center">
-         BLACK FRIDAY DEAL</h1>
-    
-         <div class="row" >
-             <asp:Repeater ID="rptrProducts" runat="server">
-                 <ItemTemplate>
-                     <div class="col-md-4 mb-4 ">
-                         <a href="ProductView.aspx?PID=<%# Eval("PID") %>" style="text-decoration: none;">
-                             <div>
-                                 <img src="Images/ProductImages/<%# Eval("PID") %>/<%# Eval("ImageName") %><%# Eval("Extention") %>"
-                                     alt="<%# Eval("ImageName") %>" width="300px" height="300px" class="p-1" />
-                                 <div class="caption">
-                                     <div class="probrand">
-                                         <%# Eval ("BrandName") %>
-                                     </div>
-                                     <div class="proName">
-                                         <%# Eval ("PName") %>
-                                     </div>
-                                     <div class="proPrice">
-                                         <span class="progPrice">
-                                             <%# Eval ("PPrice","{0:0,00}") %>
-                                         </span>
-                                         <%# Eval ("PSelPrice","{0:c}") %>
-                                         <span class="proPriceDiscount">(<%# Eval("DiscAmount","{0:0,00}") %>
-                                             off) </span>
-                                     </div>
-                                 </div>
-                             </div>
-                         </a>
-                     </div>
-                 </ItemTemplate>
-             </asp:Repeater>
-         </div>
+            <div class="container">
+    <!-- Section 1: Categories -->
+    <div class="row text-center py-4">
+        <div class="col-lg-4 mb-2">
+            <img class="rounded-circle img-fluid mb-3" src="Images/iphone11.jpeg" alt="Mobiles" width="200" height="140" />
+            <h2>Mobiles</h2>
+            <p>Featuring a 15.49-cm (6.1) all-screen Liquid Retina LCD and a glass and aluminum design, the iPhone 11 is as beautiful as it gets. Also, the IP68 rating ensures that it is water-resistant up to 2 meters for 30 minutes...</p>
+            <a href="#" class="btn btn-primary">View More &raquo;</a>
+        </div>
+        <div class="col-lg-4 mb-2">
+            <img class="rounded-circle img-fluid mb-3" src="Images/Shoes.jpeg" alt="Footwear" width="200" height="140" />
+            <h2>Footwear</h2>
+            <p>Featuring top-notch design and comfort, our footwear collection stands out. Perfect for everyday use or special occasions...</p>
+            <a href="#" class="btn btn-primary">View More &raquo;</a>
+        </div>
+        <div class="col-lg-4">
+            <img class="rounded-circle img-fluid mb-3" src="Images/tshirt.jpeg" alt="Clothings" width="200" height="140" />
+            <h2>Clothings</h2>
+            <p>Discover our trendy clothing line that combines fashion and comfort. Find the perfect outfit for every occasion...</p>
+            <a href="#" class="btn btn-primary">View More &raquo;</a>
+        </div>
+    </div>
+
+    <!-- Section 2: Black Friday Deal -->
+    <h1 class="text-center py-4">BLACK FRIDAY DEAL</h1>
+    <div class="row">
+        <asp:Repeater ID="rptrProducts" runat="server">
+            <ItemTemplate>
+                <div class="col-md-4 mb-4">
+                    <a href="ProductView.aspx?PID=<%# Eval("PID") %>" class="text-decoration-none">
+                        <div class="card h-100 shadow-sm">
+                            <img src="Images/ProductImages/<%# Eval("PID") %>/<%# Eval("ImageName") %><%# Eval("Extention") %>" class="card-img-top" alt="<%# Eval("ImageName") %>" style="height: 200px; object-fit: cover;" />
+                            <div class="card-body">
+                                <h5 class="card-title"><%# Eval ("PName") %></h5>
+                                <p class="card-text text-muted"><%# Eval ("BrandName") %></p>
+                                <p class="card-text">
+                                    <span class="text-danger fw-bold"><%# Eval ("PSelPrice", "{0:c}") %></span>
+                                    <span class="text-muted text-decoration-line-through"><%# Eval ("PPrice", "{0:0,00}") %></span>
+                                    <span class="badge bg-success">Save <%# Eval("DiscAmount", "{0:0,00}") %></span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </ItemTemplate>
+        </asp:Repeater>
+    </div>
+</div>
+
      
-     <div class="opacity-25 text-center m-3">
-         Buy 50 mobiles and get a gift card</div>
+     <div class="bg-warning text-dark text-center py-3 rounded shadow-sm">
+  <h4 class="fw-bold mb-2">Special Offer!</h4>
+  <p class="mb-0">
+    <strong>Buy 50 mobiles</strong> and get an exclusive 
+    <span class="text-danger">gift card</span> as a reward!
+  </p>
+</div>
 
             <hr style="margin-right:100px" />
 <div class="position-relative" border: 1px solid #ddd;">
@@ -186,53 +173,42 @@
            
         </div>
     </form>
-               <footer class="bg-primary text-white text-center text-lg-start bottom-0 w-100">
+              <footer class="bg-primary text-white text-center text-lg-start">
   <!-- Grid container -->
   <div class="container p-4">
-    <!--Grid row-->
     <div class="row">
-      <!--Grid column-->
-      <div class="col-lg-9 col-md-5 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Summary</h5>
-
-        <p class="mr-5">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
-          molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam
-          voluptatem veniam, est atque cumque eum delectus sint!
+      <!-- Summary Column -->
+      <div class="col-lg-9 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">SUMMERY</h5>
+        <p>
+          Welcome to our online store! We offer a wide range of high-quality products, 
+          from the latest gadgets to trendy fashion and footwear. Our mission is to 
+          provide an exceptional shopping experience, combining great deals, fast 
+          delivery, and outstanding customer service. Shop with confidence and explore 
+          our exclusive Black Friday deals and much more. Thank you for choosing us 
+          for your shopping needs!
         </p>
       </div>
-      <!--Grid column-->
-
-      <!--Grid column-->
+      <!-- Links Column -->
       <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-               <ul class="list-unstyled mb-0">
-          <li>
-            <a href="#!" class="text-white">Link 1</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 2</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 3</a>
-          </li>
-          <li>
-            <a href="#!" class="text-white">Link 4</a>
-          </li>
+        <h5 class="text-uppercase">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="UserHome.aspx" class="text-white">Home</a></li>
+<li><a href="Products.aspx" class="text-white">Shop</a></li>
+<li><a href="About.aspx" class="text-white">About Us</a></li>
+<li><a href="Contact.aspx" class="text-white">Contact</a></li>
         </ul>
       </div>
-      <!--Grid column-->
     </div>
-    <!--Grid row-->
   </div>
-  <!-- Grid container -->
 
-  <!-- Copyright -->
+  <!-- Copyright Section -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-    © 2020 Copyright:
+    © 2024 Copyright:
     <a class="text-white" href="#">EShopping.com</a>
   </div>
-  <!-- Copyright -->
 </footer>
+
    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 -->

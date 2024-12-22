@@ -38,30 +38,22 @@ namespace E_Shopping_Web
 
 
                     //Send Reset link via Email
-
-                    String ToEmailAddress = dt.Rows[0][3].ToString();
-                    String Username = dt.Rows[0][1].ToString();
-                    String EmailBody = "Hi ," + Username + ",<br/><br/>Click the link below to reset your password<br/> <br/> http://localhost:1288/RecoverPassword.aspx?id=" + myGUID;
-
-
-                    MailMessage PassRecMail = new MailMessage("kumariaditi51@gmail.com", ToEmailAddress);
-
-                    PassRecMail.Body = EmailBody;
-                    PassRecMail.IsBodyHtml = true;
-                    PassRecMail.Subject = "Reset Password";
-
-                    using (SmtpClient client = new SmtpClient())
+                    using (MailMessage mail = new MailMessage())
                     {
-                        client.EnableSsl = true;
-                        client.UseDefaultCredentials = false;
-                        client.Credentials = new NetworkCredential("kumariaditi51@gmail.com", "aditi@12345");
-                        client.Host = "smtp.gmail.com";
-                        client.Port = 587;
-                        client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                        mail.From = new MailAddress(txtEmailID.Text);
+                        mail.To.Add(txtEmailID.Text);
+                        mail.Subject = "Hello World";
+                        mail.Body = "<h1>Hello</h1>";
+                        mail.IsBodyHtml = true;
+                       // mail.Attachments.Add(new Attachment("C:\\file.zip"));
 
-                        client.Send(PassRecMail);
+                        using (SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587))
+                        {
+                            smtp.Credentials = new NetworkCredential("", "");
+                            smtp.EnableSsl = true;
+                            smtp.Send(mail);
+                        }
                     }
-
                     //--------------
 
 

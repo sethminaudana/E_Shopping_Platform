@@ -1,12 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="SubCategory.aspx.cs" Inherits="E_Shopping_Web.SubCategory" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.Master" AutoEventWireup="true" CodeBehind="AddSubCategory.aspx.cs" Inherits="E_Shopping_Web.SubCategory" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
          <div class ="container ">
             <div class ="form-horizontal ">
-                <br />
-                <br />
-
+                
                 <h2>Add SubCategory</h2>
                 <hr />
 
@@ -40,7 +38,7 @@
                     </div>
                 </div>
                 
-
+                <br />
             </div>
 
          <h1>Sub Categories</h1>

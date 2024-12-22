@@ -181,7 +181,7 @@ namespace E_Shopping_Web
                         if (dt.Rows.Count > 0)
                         {
                             string CartQuantity = dt.Compute("Sum(Qty)", "").ToString();
-                            CartBadge.InnerText = CartQuantity;
+                            //CartBadge.InnerText = CartQuantity;
                         }
                         else
                         {

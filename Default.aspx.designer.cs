@@ -24,6 +24,15 @@ namespace E_Shopping_Platform
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// cartid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button cartid;
+
+        /// <summary>
         /// pCount control.
         /// </summary>
         /// <remarks>
