@@ -1,0 +1,110 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="User.master.cs" Inherits="E_Shopping_Platform.User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="stylesheet" href="Bootstrap 5/bootstrap.min.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+                           <nav class="navbar navbar-expand-lg navbar-light bg-info">
+  <div class=" container-fluid ">
+<a class="navbar-brand" href="Default.aspx" style="margin-right:200px">
+    <img src="Icons/1b8c944a60aded920baf9a3ed09b9adc.png" alt="MyEShopping" height="50" />
+    MyEShopping
+</a> <div class="d-inline">
+                     <asp:Button  CssClass="btn btn-primary navbar-btn my-2 my-sm-0" runat="server" Text="Cart" PostBackUrl="~/Cart.aspx" /><span class="position-absolute translate-middle badge rounded-pill bg-danger " id="pCount" runat="server">0</span>
+     <asp:Button ID="btnlogout"  CssClass="btn btn-default navbar-btn my-2 my-sm-0" runat="server" Text="Sign Out" OnClick="btnlogout_Click" />
+    
+     </div>   
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="UserHome.aspx">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="About.aspx">About</a>
+        </li>
+          <li class="nav-item">
+  <a class="nav-link" href="Contact.aspx">Contact US</a>
+</li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Products
+          </a>
+            
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="Products.aspx">All Produts</a></li>
+              <li><hr class="dropdown-divider"/></li>
+              <h6 class="dropdown-header">Men</h6>
+            <li><a class="dropdown-item" href="ManShirt.aspx">Shirts</a></li>
+              <li><a class="dropdown-item" href="ManPants.aspx">Pants</a></li>
+              <li><a class="dropdown-item" href="ManDenims.aspx"x>Denims</a></li>
+                <li><hr class="dropdown-divider"/></li>
+          <h6 class="dropdown-header">Women</h6>
+        <li><a class="dropdown-item" href="WomanTop.aspx">Top</a></li>
+      <li><a class="dropdown-item" href="womanLegging.aspx">Leggins</a></li>
+         <li><a class="dropdown-item" href="WomanSarees.aspx">Sarees</a></li>
+            <li><hr class="dropdown-divider"/></li>
+          </ul> </li>
+                  
+             </ul>
+               
+    </div>
+     
+  </div>
+</nav>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+                                 <footer class="bg-primary text-white text-center text-lg-start">
+  <!-- Grid container -->
+  <div class="container p-4">
+    <div class="row">
+      <!-- Summary Column -->
+      <div class="col-lg-9 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">SUMMERY</h5>
+        <p>
+          Welcome to our online store! We offer a wide range of high-quality products, 
+          from the latest gadgets to trendy fashion and footwear. Our mission is to 
+          provide an exceptional shopping experience, combining great deals, fast 
+          delivery, and outstanding customer service. Shop with confidence and explore 
+          our exclusive Black Friday deals and much more. Thank you for choosing us 
+          for your shopping needs!
+        </p>
+      </div>
+      <!-- Links Column -->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+        <h5 class="text-uppercase">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="UserHome.aspx" class="text-white">Home</a></li>
+          <li><a href="Products.aspx" class="text-white">Shop</a></li>
+          <li><a href="About.aspx" class="text-white">About Us</a></li>
+          <li><a href="Contact.aspx" class="text-white">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright Section -->
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+    © 2024 Copyright:
+    <a class="text-white" href="#">EShopping.com</a>
+  </div>
+</footer>
+                <script src="Bootstrap 5/popper.min.js"></script>
+<script src="Bootstrap 5/bootstrap.min.js"></script>
+    </form>
+        
+</body>
+</html>

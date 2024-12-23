@@ -7,74 +7,56 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace E_Shopping_Platform
+namespace E_Shopping_Web
 {
 
 
-    public partial class Default
+    public partial class AddBrand
     {
 
         /// <summary>
-        /// form1 control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// cartid control.
+        /// txtBrand control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cartid;
+        protected global::System.Web.UI.WebControls.TextBox txtBrand;
 
         /// <summary>
-        /// pCount control.
+        /// RequiredFieldValidatorBrandName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pCount;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorBrandName;
 
         /// <summary>
-        /// btnSignIN control.
+        /// btnAddBrand control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignIN;
+        protected global::System.Web.UI.WebControls.Button btnAddBrand;
 
         /// <summary>
-        /// btnSignUP control.
+        /// rptrBrands control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignUP;
-
-        /// <summary>
-        /// btnlogout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnlogout;
-
-        /// <summary>
-        /// rptrProducts control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptrProducts;
+        protected global::System.Web.UI.WebControls.Repeater rptrBrands;
     }
 }

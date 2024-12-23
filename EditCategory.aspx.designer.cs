@@ -7,74 +7,56 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace E_Shopping_Platform
+namespace E_Shopping_Web
 {
 
 
-    public partial class Default
+    public partial class EditCategory
     {
 
         /// <summary>
-        /// form1 control.
+        /// txtID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.TextBox txtID;
 
         /// <summary>
-        /// cartid control.
+        /// txtUpdateCatName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cartid;
+        protected global::System.Web.UI.WebControls.TextBox txtUpdateCatName;
 
         /// <summary>
-        /// pCount control.
+        /// btnUpdateBrand control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pCount;
+        protected global::System.Web.UI.WebControls.Button btnUpdateBrand;
 
         /// <summary>
-        /// btnSignIN control.
+        /// txtFilterGrid1Record control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignIN;
+        protected global::System.Web.UI.WebControls.TextBox txtFilterGrid1Record;
 
         /// <summary>
-        /// btnSignUP control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignUP;
-
-        /// <summary>
-        /// btnlogout control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnlogout;
-
-        /// <summary>
-        /// rptrProducts control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptrProducts;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
     }
 }

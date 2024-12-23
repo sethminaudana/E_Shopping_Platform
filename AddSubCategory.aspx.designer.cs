@@ -7,74 +7,83 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace E_Shopping_Platform
+namespace E_Shopping_Web
 {
 
 
-    public partial class Default
+    public partial class SubCategory
     {
 
         /// <summary>
-        /// form1 control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// cartid control.
+        /// ddlMainCatID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button cartid;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMainCatID;
 
         /// <summary>
-        /// pCount control.
+        /// RequiredFieldValidatorMainCatID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl pCount;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatorMainCatID;
 
         /// <summary>
-        /// btnSignIN control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignIN;
+        protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
-        /// btnSignUP control.
+        /// txtSubCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSignUP;
+        protected global::System.Web.UI.WebControls.TextBox txtSubCategory;
 
         /// <summary>
-        /// btnlogout control.
+        /// RequiredFieldValidatortxtSubCategoryName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnlogout;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidatortxtSubCategoryName;
 
         /// <summary>
-        /// rptrProducts control.
+        /// btnAddSubCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptrProducts;
+        protected global::System.Web.UI.WebControls.Button btnAddSubCategory;
+
+        /// <summary>
+        /// rptrSubCat control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptrSubCat;
     }
 }
