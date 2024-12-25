@@ -13,7 +13,7 @@ namespace E_Shopping_Platform
 {
     public partial class Default : System.Web.UI.Page
     {
-        public static String CS = "Data Source=SETHMINA\\SQLEXPRESS;Initial Catalog=MyShoppingDB;Integrated Security=True";
+        public static String CS = "Data Source=database-eshop.c7a4ywom6hd9.ap-southeast-1.rds.amazonaws.com;Initial Catalog=eshopAWS;User ID=admin;Password=seve123#";
         protected void Page_Load(object sender, EventArgs e)
         {
             //if (Request.QueryString["UserLogin"] == "YES")

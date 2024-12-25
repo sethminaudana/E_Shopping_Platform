@@ -426,6 +426,7 @@
     <Content Include="womanLegging.aspx" />
     <Content Include="WomanSarees.aspx" />
     <Content Include="WomanTop.aspx" />
+    <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.7.0.js" />
     <Content Include="Scripts\jquery-3.7.0.min.js" />
